@@ -12,15 +12,15 @@ create table if not exists albums(
 	year int);
 
 create table if not exists songs(
-song_id SERIAL primary key,
-name text,
-length float,
-album_id INTEGER REFERENCES albums(album_id));
+	song_id SERIAL primary key,
+	name text,
+	length float,
+	album_id INTEGER REFERENCES albums(album_id));
 
 create table if not exists collections(
-collection_id SERIAL primary key,
-name text,
-year int);
+	collection_id SERIAL primary key,
+	name text,
+	year int);
 
 create table if not exists GenresMusicians(
 	GenreMusician_id SERIAL primary key,
